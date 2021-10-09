@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>FILM GUNCELLE</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+	integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+	crossorigin="anonymous" />
+<style>
+body {
+	background-image:
+		url("https://lh3.googleusercontent.com/proxy/-2qpB_sFQZFr1yW07DjSJlfslTnZuaZ8MZQ6wCuaznhq4PR4NVfK22xaIaVPm-IttqDy-fZjLp-1T_LipqQaYDLIHiKdX2gmslYdfwK_tnOnjwQEqhU");
+}
+
+navbar {
+	background-color: black;
+}
+
+.container {
+	text-align: -webkit-center;
+}
+</style>
+</head>
+<body class="bg-light">
+	<div class="bs-example mt-0">
+		<nav class="navbar navbar-expand-md navbar-light">
+			<div class="collapse navbar-collapse  mt-4 " id="navbarCollapse">
+				<div class="navbar-nav mr-auto collapse navbar-collapse">
+					<a th:href="@{/}"><i
+						class="text-warning fas fa-arrow-circle-left mr-2  fa-2x"></i> </a>
+				</div>
+				<div
+					class="navbar-nav mr-auto collapse navbar-collapse justify-content-center">
+					<a th:href="@{/}" class=" text-warning">
+						<h3 class="text-center">AVSFILM</h3>
+					</a>
+				</div>
+				<div
+					class="navbar-nav mr-auto collapse navbar-collapse justify-content-end">
+					<a th:href="@{/logout}"
+						class="btn btn-outline-dark my-2 my-md-0 mr-2 text-light">ÇIKIŞ
+						YAP</a>
+				</div>
+			</div>
+		</nav>
+		<hr style="border: 2px solid yellow">
+	</div>
+	<br>
+
+	<div class="container  py-5 border border-success mt-5">
+
+		<h2 class="mb-5 text-success">GÜNCELLE</h2>
+		<br>
+
+		<form action="#" th:action="@{/saveFilm}" th:object="${film}"
+			method="POST">
+			<div class="row-12 px-7 ml-4">
+				<input type="hidden" th:field="*{film_id}" /> <input type="text"
+					th:field="*{film_adi}" class="form-control mb-4 col-8"> <input
+					type="text" th:field="*{film_yili}" class="form-control mb-4 col-8">
+				<input type="text" th:field="*{film_kategori}"
+					class="form-control mb-4 col-8"> <input type="text"
+					th:field="*{film_aciklama}" class="form-control mb-4 col-8">
+				<input type="text" th:field="*{film_dili}"
+					class="form-control mb-4 col-8"> <input type="text"
+					th:field="*{film_yonetmen}" class="form-control mb-4 col-8">
+				<input type="text" th:field="*{film_medya}"
+					class="form-control mb-4 col-8"> <input type="text"
+					th:field="*{film_oyuncu}" class="form-control mb-4 col-8">
+				<button type="submit" class="btn btn-outline-success col-2">GÜNCELLE</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

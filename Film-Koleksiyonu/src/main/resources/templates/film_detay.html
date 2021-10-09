@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${film.film_adi}"></title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+<link rel="stylesheet"
+	href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+	integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+	crossorigin="anonymous" />
+<style>
+body {
+	background-image:
+		url("https://lh3.googleusercontent.com/proxy/-2qpB_sFQZFr1yW07DjSJlfslTnZuaZ8MZQ6wCuaznhq4PR4NVfK22xaIaVPm-IttqDy-fZjLp-1T_LipqQaYDLIHiKdX2gmslYdfwK_tnOnjwQEqhU");
+}
+
+navbar {
+	background-color: black;
+}
+
+.card {
+	background-color: #F4F0E4;
+}
+</style>
+</head>
+
+<body>
+	<div class="bs-example mt-0">
+		<nav class="navbar navbar-expand-md navbar-light">
+			<div class="collapse navbar-collapse  mt-4 " id="navbarCollapse">
+				<div class="navbar-nav mr-auto collapse navbar-collapse">
+					<a th:href="@{/}"><i
+						class=" text-warning fas fa-arrow-circle-left mr-2  fa-2x"></i> </a>
+				</div>
+				<div
+					class="navbar-nav mr-auto collapse navbar-collapse justify-content-center">
+					<a th:href="@{/}" class=" text-warning">
+						<h3 class="text-center">AVSFILM</h3>
+					</a>
+				</div>
+				<div
+					class="navbar-nav mr-auto collapse navbar-collapse justify-content-end">
+					<a th:href="@{/logout}"
+						class="btn btn-outline-dark my-2 my-md-0 mr-2 text-light">ÇIKIŞ
+						YAP</a> <br>
+				</div>
+			</div>
+		</nav>
+		<hr style="border: 2px solid yellow">
+	</div>
+	<div class="album py-5 ">
+		<div class="pl-5 pr-5 text-center w-100">
+			<h1 class="mb-0 text-warning" th:text="${film.film_adi}"></h1>
+			<br>
+			<div class="card p-5 m-auto border border-warning">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-md-7 bold h5 text-left">
+							<p>
+								<b>Adı: <b th:text="${film.film_adi}"></b></b>
+							</p>
+							<p>
+								<b>Açıklama: <b th:text="${film.film_aciklama}"></b></b>
+							</p>
+							<p>
+								<b>Kategori: <b th:text="${film.film_kategori}"></b></b></b>
+							</p>
+							<p>
+								<b>Yıl: <b th:text="${film.film_yili}"></b></b>
+							</p>
+							<p>
+								<b>Dil: <b th:text="${film.film_dili}"></b></b>
+							</p>
+							<p>
+								<b>Film Oyuncu: <b th:text="${film.film_oyuncu}"></b></b>
+							</p>
+							<p>
+								<b>Film Yönetmen: <b th:text="${film.film_yonetmen}"></b></b>
+							</p>
+
+						</div>
+						<div class="col-md-5">
+							<img th:src="${film.film_medya}" class=" img card-img-top w-50"
+								alt="">
+						</div>
+
+						<div class="d-flex justify-content-end align-items-center mr-5">
+							<div class="btn-group">
+								<a
+									th:href="@{/showFormForGuncelle/{film_id}(film_id=${film.film_id})}"><button
+										type="button" class="btn btn-md btn-outline-info">Düzenle</button></a>
+								<br> <a
+									th:href="@{/deleteFilm/{film_id}(film_id=${film.film_id})}"><button
+										type="button" class="btn btn-md btn-outline-danger"
+										style="margin-left: 9px;">Sil</button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+		</div>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>FILM EKLE</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+	integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+	crossorigin="anonymous" />
+<style>
+body {
+	background-image:
+		url("https://lh3.googleusercontent.com/proxy/-2qpB_sFQZFr1yW07DjSJlfslTnZuaZ8MZQ6wCuaznhq4PR4NVfK22xaIaVPm-IttqDy-fZjLp-1T_LipqQaYDLIHiKdX2gmslYdfwK_tnOnjwQEqhU");
+}
+
+navbar {
+	background-color: black;
+}
+
+.container {
+	text-align: -webkit-center;
+}
+</style>
+</head>
+<body class="bg-light">
+	<div class="bs-example mt-0">
+		<nav class="navbar navbar-expand-md navbar-light ">
+			<div class="collapse navbar-collapse  mt-4 " id="navbarCollapse">
+				<div class="navbar-nav mr-auto collapse navbar-collapse">
+					<a th:href="@{/}"><i
+						class="text-warning fas fa-arrow-circle-left mr-2  fa-2x"></i> </a>
+				</div>
+				<div
+					class="navbar-nav mr-auto collapse navbar-collapse justify-content-center">
+					<a th:href="@{/}" class=" text-warning">
+						<h3 class="text-center">AVSFILM</h3>
+					</a>
+				</div>
+				<div
+					class="navbar-nav mr-auto collapse navbar-collapse justify-content-end">
+					<a th:href="@{/logout}"
+						class="btn btn-outline-dark my-2 my-md-0 mr-2 text-light">ÇIKIŞ
+						YAP</a>
+				</div>
+			</div>
+		</nav>
+		<hr style="border: 2px solid yellow">
+	</div>
+	<br>
+
+	<div class="container mt-5  py-5 border border-success">
+		<h2 class="mb-5 text-success">FİLM EKLE</h2>
+		<form th:action="@{/saveFilm} " th:object="${film}" method="POST">
+
+			<div class="row-12 px-7 ml-8">
+				<input type="text" th:field="*{film_adi}" placeholder="Film adı"
+					class="form-control  mb-4 col-8  "> <input type="text"
+					th:field="*{film_yili}" placeholder="Filmin Yılı"
+					class="form-control mb-4 col-8"> <input type="text"
+					th:field="*{film_kategori}" placeholder="Filmin Kategorisi"
+					class="form-control mb-4 col-8"> <input type="text"
+					th:field="*{film_aciklama}" placeholder="Filmin Konusu"
+					class="form-control mb-4 col-8">
+
+				<div>
+					<select class="form-control mb-4 col-8" th:field="*{film_dili}">
+						<option value="0">Filmin Dili</option>
+						<option th:value="'Türkçe'" th:text="Türkçe"></option>
+						<option th:value="'İngilizce'" th:text="İngilizce"></option>
+						<option th:value="'İspanyolca'" th:text="İspanyolca"></option>
+						<option th:value="'Fransızca'" th:text="Fransızca"></option>
+					</select>
+				</div>
+
+				<input type="text" th:field="*{film_yonetmen}"
+					placeholder="Filmin Yönetmeni" class="form-control mb-4 col-8">
+				<input type="text" th:field="*{film_medya}"
+					placeholder="Filmin Medyası" class="form-control mb-4 col-8">
+				<input type="text" th:field="*{film_oyuncu}"
+					placeholder="Filmin Oyuncusu" class="form-control mb-4 col-8">
+				<button type="submit" class="btn btn-outline-success btn-lg">
+					Film Ekle</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

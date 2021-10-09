@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>GİRİS YAP</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+<style>
+body {
+	background-image:
+		url("https://lh3.googleusercontent.com/proxy/-2qpB_sFQZFr1yW07DjSJlfslTnZuaZ8MZQ6wCuaznhq4PR4NVfK22xaIaVPm-IttqDy-fZjLp-1T_LipqQaYDLIHiKdX2gmslYdfwK_tnOnjwQEqhU");
+}
+
+navbar {
+	background-color: black;
+}
+
+.container {
+	color: beige;
+}
+</style>
+</head>
+<body>
+	<div class="bs-example mt-0">
+		<nav class="navbar navbar-expand-md navbar-light">
+			<div class="collapse navbar-collapse  mt-4 " id="navbarCollapse">
+				<div
+					class="navbar-nav mr-auto collapse navbar-collapse justify-content-center">
+					<h3 class="text-info">AVSFILM</h3>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<br>
+	<br>
+	<div class="container mt-5  py-5 border border-info">
+
+		<div class="col-md-5 col-md-offset-3">
+
+			<h1>GİRİS YAP</h1>
+			<br>
+			<form th:action="@{/login}" method="post">
+
+				<div th:if="${param.error}">
+					<div class="alert alert-danger">Geçersiz kullanıcı adı veya
+						şifre!</div>
+				</div>
+
+				<div th:if="${param.logout}">
+					<div class="alert alert-info">Çıkış Yaptınız!</div>
+				</div>
+
+				<div class="form-group">
+					<label for="username">EMAIL </label>: <input type="text"
+						class="form-control" id="username" name="username"
+						placeholder="Email adresinizi giriniz " autofocus="autofocus">
+				</div>
+
+				<div class="form-group">
+					<label for="username">SIFRE</label>: <input type="password"
+						class="form-control" id="password" name="password"
+						placeholder="Şifrenizi Giriniz" />
+				</div>
+
+				<div class="form-group">
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-3">
+							<button type="submit" class="btn btn-primary">GİRİS YAP</button>
+						</div>
+					</div>
+				</div>
+			</form>
+
+			<div class="form-group">
+				<span>Yeni Kullanıcı? <a href="/" th:href="@{/kayit}">Kayıt
+						Ol</a>
+				</span>
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

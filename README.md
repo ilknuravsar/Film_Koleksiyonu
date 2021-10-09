@@ -17,11 +17,16 @@ Otomatik Konfigürasyon için Spring Boot Web uygulaması geliştirme için Spri
 - Film Ayrıntılarını Gösterme
 
 ## PROJE ÇALIŞTIRMA KOMUTU
-* projeyi indirin
-* netbeans/eclipse ide ile projeyi yükleyin
-* mySQL'de adı filmkoleksiyonu olan bir veritabanı oluşturun
+* Projeyi indirin
+* Netbeans/eclipse ide ile projeyi yükleyin
+* MySQL'de adı filmkoleksiyonu olan bir veritabanı oluşturun
 * Tomcat ve XAMPP ayarlarını yapın
-* sonunda projeyi çalıştırın
+* Sonunda projeyi çalıştırın
+
+## PROJE HAKKINDA AÇIKLAMA
+Sisteme adınız, soyadınız ve mailiniz ile kaydolduktan sonra mail ve şifreniz ile giriş 
+yapabilirsiniz. Giriş yaptıktan sonra film hakkında detaylı bilgi edinebilir,
+film ekleyebilir, film üzerinde değişiklikler yapabilir ve filmi silebilirsiniz.
 
 
 ## RESİMLER

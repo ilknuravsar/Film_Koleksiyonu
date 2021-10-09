@@ -1,6 +1,7 @@
 # AVSFILM
-
-AVSFILM sitesi giriş yaptıktan sonra siteye eklenen filmleri görebileceğiniz, filmlerin ayrıntılarına bakabileceğiniz, filmleri güncelleyip silebileceğiniz bir web sitesidir. Aynı zamanda giriş yaptıktan sonra yeni filmler ekleyebilirsiniz. Bu siteye üye değilseniz bile üye olabileceğiniz bir yapısı bulunmaktadır.
+Sisteme adınız, soyadınız ve mailiniz ile kaydolduktan sonra mail ve şifreniz ile giriş 
+yapabilirsiniz. Giriş yaptıktan sonra film hakkında detaylı bilgi edinebilir,
+film ekleyebilir, film üzerinde değişiklikler yapabilir ve filmi silebilirsiniz.
 
 ## MODULLER
 * User Module
@@ -23,10 +24,6 @@ Otomatik Konfigürasyon için Spring Boot Web uygulaması geliştirme için Spri
 * Tomcat ve XAMPP ayarlarını yapın
 * Sonunda projeyi çalıştırın
 
-## PROJE HAKKINDA AÇIKLAMA
-Sisteme adınız, soyadınız ve mailiniz ile kaydolduktan sonra mail ve şifreniz ile giriş 
-yapabilirsiniz. Giriş yaptıktan sonra film hakkında detaylı bilgi edinebilir,
-film ekleyebilir, film üzerinde değişiklikler yapabilir ve filmi silebilirsiniz.
 
 
 ## RESİMLER

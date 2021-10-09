@@ -1,5 +1,5 @@
 # AVSFILM
-Sisteme adınız, soyadınız ve mailiniz ile kaydolduktan sonra mail ve şifreniz ile giriş 
+AVS film sitesine adınız, soyadınız ve mailiniz ile kaydolduktan sonra mail ve şifreniz ile giriş 
 yapabilirsiniz. Giriş yaptıktan sonra film hakkında detaylı bilgi edinebilir,
 film ekleyebilir, film üzerinde değişiklikler yapabilir ve filmi silebilirsiniz.
 
